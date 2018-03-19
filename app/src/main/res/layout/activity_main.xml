@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sample.room.com.kotin_with_room_sample.MainActivity">
+
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recycler_border"/>
+
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_below="@+id/first_name"
+        android:layout_marginTop="15dp"
+        android:hint="last_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recycler_border"/>
+
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_below="@+id/last_name"
+        android:layout_marginTop="15dp"
+        android:hint="age"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/recycler_border"/>
+
+<Button
+    android:id="@+id/btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/age"
+    android:layout_marginTop="15dp"
+    android:textSize="12sp"
+    android:layout_centerHorizontal="true"
+    android:text="Insert in Database"
+    />
+
+
+    <Button
+        android:id="@+id/show_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn"
+        android:layout_marginTop="15dp"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:text="show_users"
+        />
+
+
+</RelativeLayout>
