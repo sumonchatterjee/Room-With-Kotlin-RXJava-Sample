@@ -18,8 +18,8 @@ import kotlinx.android.synthetic.main.layout_details.*
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_details)
         initializeValues()
-      //  getAllInsertedUsersDetails()
-        getDetailsOfPersons()
+        getAllInsertedUsersDetails()
+        //getDetailsOfPersons() -> to get all persons whose age are above 15
     }
 
    // initialize values
