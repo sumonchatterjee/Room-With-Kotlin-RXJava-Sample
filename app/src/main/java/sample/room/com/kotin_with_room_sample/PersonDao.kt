@@ -1,9 +1,6 @@
 package sample.room.com.kotin_with_room_sample
 
-import android.arch.persistence.room.Dao
-import android.arch.persistence.room.Delete
-import android.arch.persistence.room.Insert
-import android.arch.persistence.room.Query
+import android.arch.persistence.room.*
 import io.reactivex.Flowable
 
 /**
@@ -19,6 +16,20 @@ interface PersonDao{
 
     @Query("SELECT * FROM person where age > '15'")
     fun getAllPeopleWithAgeAboveFifteen(): Flowable<List<Person>>
+
+    @Query("DELETE FROM person")
+    abstract fun deleteAllUsers()
+
+
+    @Transaction
+    open fun updateData(users: List<Person>) {
+        deleteAllUsers()
+        insertAll(users)
+    }
+
+
+    @Insert
+    abstract fun insertAll(users: List<Person>)
 
 
 }
